@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="a.css"> -->
+		<style type="text/css">
+			/* 总体属性background:background-color background-image background-position background-repeat background-attachment; */
+			/* * {
+				background: #ffffff url(box2.jpg) right top no-repeat fixed;
+			} */
+
+			/* 通用选择器 */
+			/* *{
+				padding: 0px;
+				margin: 0px;
+			} */
+
+			/* 元素选择器 */
+			p {
+				font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			}
+
+
+			/* 类选择器 */
+			.a {
+				height: 20px;
+				background-color: aquamarine;
+				color: blueviolet;
+			}
+
+			/* ID选择器 */
+			#a {
+				background-color: aqua;
+			}
+
+			/* 元素选择器 */
+			a {
+				text-decoration: none;
+			}
+
+			/* 伪类选择器 */
+			a:hover {
+				color: blue;
+			}
+
+			a:active {
+				color: black;
+			}
+
+			/* a:link{
+				color: orange;
+			} */
+			/*与active属性相近 */
+			/* a:focus{
+				color: black;
+			} */
+			/* 点击生效*/
+
+			/* a:visited{
+				color: orange;
+			} */
+			/* 未访问更改 */
+
+			/* 看作dir的第一个子元素 */
+			span:first-child {
+				color: fuchsia;
+				cursor: default;
+			}
+
+			/* :lang(c)理解带有lang="c"的属性 */
+			span:lang(c) {
+				color: coral;
+				text-decoration: underline;
+				cursor: pointer;
+			}
+
+			input:focus {
+				background-color: gainsboro;
+			}
+
+			div>p {
+				/* color: #000000; */
+				/* color: coral; */
+				/* color: rgb(255, 170, 127); */
+				color: rgba(255, 170, 1, 0.7);
+			}
+
+			div .b {
+				text-align: center;
+			}
+
+			/* 只有em受父元素和当前文本字体影响且存在伸缩性 */
+			.text1 {
+				/* text-indent: 1%; */
+				/* text-indent: 16px; */
+				/* font-size: 10px; */
+				/* text-indent: 12pt; */
+				text-indent: 1em;
+				/* text-indent: -1em; */
+
+
+				/* text-decoration: none; */
+				text-decoration: line-through;
+				/* text-decoration: overline; */
+				/* text-decoration: underline; */
+			}
+
+			/* word-spacing针对存在空格的文字，letter-spacing针对所有的文字符 */
+			.text2 {
+				color: #7f687a;
+				letter-spacing: 1em;
+				word-spacing: 2em;
+				/* 由于汉子无空格，对其不生效 */
+			}
+
+			.text3 {
+				color: blue;
+				line-height: 2;
+				/* line-height: 240%; */
+				/* line-height: 32px;/*em|pt*/
+			}
+
+			/* font-weight的范围在100~900其余的值效果同于两端值，当然存在英文表达 */
+			/* font有固定格式不多介绍 */
+			.text4 {
+				font-size: 2em;
+				font-family: 'Times New Roman', Times, serif;
+				/* font: ; */
+				font-style: italic;
+				/* font-style: oblique; */
+				font-weight: 900;
+			}
+
+			.text5 {
+				background-color: transparent;
+				background-image: ;
+				background-attachment: scroll fixed inherit;
+			}
+
+			/* 此时的block属性生效，列如宽高以及上下边距 */
+			strong {
+				display: block;
+				width: 100px;
+				letter-spacing: 16px;
+				margin: 4px;
+				padding: 2px;
+				font-style: italic;
+			}
+
+			/* 涉及到优先级 */
+			ul {
+				list-style-type: lower-greek;
+			}
+
+			.table1 {
+				caption-side: bottom;
+				border-spacing: 1px 1cm;
+				/* border-collapse: collapse; */
+				/* table-layout: automatic; */
+				/* 好像不用了 */
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1 align="center">css</h1>
+
+		<div class="a">
+			dadasasadddd
+		</div><br><br>
+
+		<div id="a">
+			我的韧劲
+		</div><br><br>
+
+		<a href="" target="_self">
+			<p>点击切换网页</p>
+		</a><br>
+
+		<dir>
+			<span>第一个span</span><br>
+			<span>第二个span</span><br>
+			<span lang="c">第三个span</span>
+		</dir><br><br>
+
+		<form method="POST" action="#">
+			用户名:<input type="text" required><br>
+			密码: <input type="password" pattern="\d{6}" placeholder="此为六位数密码" required><br>
+			<input type="submit" value="提交">
+		</form><br><br>
+
+		<div>
+			<p>
+				这是一个子元素选择器
+			</p>
+			<p class="b">
+				这也是一个交集选择器
+			</p>
+		</div><br><br>
+
+		<div class="text1">
+			这是一个文本叙述，用于测试缩进数值的大小以及文本修饰
+		</div><br><br>
+
+		<div class="text2">
+			这是另一个文本叙述，用于测试字符间距以及字间距<br>
+			a b c d e f g h
+		</div><br><br>
+
+		<div class="text3">
+			这是又另一个文本叙述，用于测试行高<br>
+			这是又另一个文本叙述，用于测试行高
+		</div><br><br>
+
+
+		<div class="text4">字体的改变</div><br><br>
+
+		<strong>这是关于行内元素对于块级元素的改变</strong>
+		<strong>这是关于行内元素对于块级元素的改变</strong><br><br>
+
+		<ul type="circle">
+			<h3>只是一个无序列表</h3>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul><br><br>
+
+		<table align="center" cellpadding="4" cellspacing="9" border="1" width="40%" class="table1">
+			<caption>表格</caption>
+			<tr>
+				<th>开头1</th>
+				<th>开头2</th>
+			</tr>
+			<tr>
+				<td align="center">Data</td>
+				<td align="center">Data</td>
+			</tr>
+			<tr>
+				<td align="center">Data</td>
+				<td align="center">Data</td>
+			</tr>
+		</table>
+	</body>
+</html>
